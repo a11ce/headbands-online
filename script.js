@@ -22,30 +22,26 @@ var sCount = 0;
 var pCount = 0;
 
 function newGame() {
-    if (!timer) {
+    resetState()
 
-        curList = listsDict[document.getElementById("listChoices").value]
-        time = document.getElementById("startingTime").value;
+    curList = listsDict[document.getElementById("listChoices").value]
+    time = document.getElementById("startingTime").value;
 
+    document.getElementById("timer").innerHTML = time;
+    document.getElementById("gameOptions").style.display = "none";
+    document.getElementById("scoreLine").style.display = "block";
+    setHideOnStop("block");
+
+    newWord();
+
+
+    timer = setInterval(function() {
+        time--;
+        if (time == 0) {
+            endGame();
+        }
         document.getElementById("timer").innerHTML = time;
-        document.getElementById("gameOptions").style.display = "none";
-        document.getElementById("scoreLine").style.display = "block";
-        setHideOnStop("block");
-
-        newWord();
-
-
-        timer = setInterval(function() {
-            time--;
-            if (time == 0) {
-                endGame();
-            }
-            document.getElementById("timer").innerHTML = time;
-        }, 1000);
-    } else {
-        resetState();
-        newGame();
-    }
+    }, 1000);
 }
 
 function setHideOnStop(s) {
