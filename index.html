@@ -1,6 +1,18 @@
 </html>
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PNCNFVNQQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9PNCNFVNQQ');
+    </script>
     <link rel="stylesheet" href="styles.css">
     <script src="./wordlists.js"></script>
     <script src="./script.js"></script>
@@ -13,13 +25,13 @@
 
     <div id="gameplay">
         <h2 id="timer" class="hideOnStop">Loading...</h2>
-        
+
         <div id="scoreLine" class="gameLine">
             <h3 id="successcount" class="score" style="color: #6DA34D;">0</h3>
             <h3 class="score">-</h3>
             <h3 id="passcount" class="score" style="color: #D64045;">0</h3>
         </div><br>
-        
+
         <div class="gameLine hideOnStop">
             <button class="button" id="success" style="background-color: #6DA34D;">Done!</button>
             <button class="button" id="pass" style="background-color: #D64045;">Pass</button>

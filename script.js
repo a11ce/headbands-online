@@ -7,9 +7,9 @@ window.onload = function() {
         listChoices.add(newOption);
     }
     setHideOnStop("none");
-    
+
     document.getElementById("scoreLine").style.display = "none";
-    
+
     document.getElementById("pass").addEventListener("click", pass, false);
     document.getElementById("success").addEventListener("click", success, false);
     document.getElementById("startbutton").addEventListener("click", newGame, false);
@@ -23,7 +23,7 @@ var pCount = 0;
 
 function newGame() {
     if (!timer) {
-        
+
         curList = listsDict[document.getElementById("listChoices").value]
         time = document.getElementById("startingTime").value;
 
@@ -31,7 +31,7 @@ function newGame() {
         document.getElementById("gameOptions").style.display = "none";
         document.getElementById("scoreLine").style.display = "block";
         setHideOnStop("block");
-        
+
         newWord();
 
 
@@ -49,8 +49,8 @@ function newGame() {
 }
 
 function setHideOnStop(s) {
-    var toSet = document.getElementsByClassName("hideOnStop"); 
-    for(var i = 0; i < toSet.length; i++){
+    var toSet = document.getElementsByClassName("hideOnStop");
+    for (var i = 0; i < toSet.length; i++) {
         toSet[i].style.display = s;
     }
 }
@@ -61,7 +61,7 @@ function endGame() {
     timer = null;
     document.getElementById("gameOptions").style.display = "block";
     setHideOnStop("none");
-        
+
 }
 
 function resetState() {
