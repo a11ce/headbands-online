@@ -1,6 +1,8 @@
 </html>
 <head>
    <link rel="stylesheet" href="styles.css">
+    <script src="./wordlists.js"></script>
+    <script src="./script.js"></script>
 </head>
 
 
@@ -8,8 +10,11 @@
 
   <h1 id="curItem"> Headbands! </h1>
   <div>
+  <select name="listChoices" id="listChoices">
+  </select> 
+  <input type="number" id="startingTime" value="60">
   <button class="startbutton" id="startbutton">Start!</button>
-  <h2 id="timer">60</h2>
+  <h2 id="timer">Loading...</h2>
 </div>
   <button class="button" id="success">Success</button>
   <button class="button" id="pass">Pass</button>
@@ -18,8 +23,7 @@
   <h2> Successes: </h2>
   <h3 id = "successcount">0</h3>
 
-  <script src="./lists.js">
-    </script>
+
 
 
 </body>
