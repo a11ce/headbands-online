@@ -6,6 +6,10 @@ window.onload = function() {
         newOption.text = key;
         listChoices.add(newOption);
     }
+    setHideOnStop("none");
+    
+    document.getElementById("scoreLine").style.display = "none";
+    
     document.getElementById("pass").addEventListener("click", pass, false);
     document.getElementById("success").addEventListener("click", success, false);
     document.getElementById("startbutton").addEventListener("click", newGame, false);
@@ -25,7 +29,8 @@ function newGame() {
 
         document.getElementById("timer").innerHTML = time;
         document.getElementById("gameOptions").style.display = "none";
-        document.getElementById("gameplay").style.display = "block";
+        document.getElementById("scoreLine").style.display = "block";
+        setHideOnStop("block");
         
         newWord();
 
@@ -43,13 +48,19 @@ function newGame() {
     }
 }
 
+function setHideOnStop(s) {
+    var toSet = document.getElementsByClassName("hideOnStop"); 
+    for(var i = 0; i < toSet.length; i++){
+        toSet[i].style.display = s;
+    }
+}
 
 function endGame() {
     document.getElementById("curItem").innerHTML = "Game Over!";
     clearInterval(timer);
     timer = null;
     document.getElementById("gameOptions").style.display = "block";
-    document.getElementById("gameplay").style.display = "none";
+    setHideOnStop("none");
         
 }
 

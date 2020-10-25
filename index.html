@@ -11,26 +11,26 @@
 
     <h1 id="curItem">SpeedRound!</h1>
 
+    <div id="gameplay">
+        <h2 id="timer" class="hideOnStop">Loading...</h2>
+        
+        <div id="scoreLine" class="gameLine">
+            <h3 id="successcount" class="score" style="color: #6DA34D;">0</h3>
+            <h3 class="score">-</h3>
+            <h3 id="passcount" class="score" style="color: #D64045;">0</h3>
+        </div><br>
+        
+        <div class="gameLine hideOnStop">
+            <button class="button" id="success" style="background-color: #6DA34D;">Done!</button>
+            <button class="button" id="pass" style="background-color: #D64045;">Pass</button>
+        </div>
+    </div>
+
     <div id="gameOptions" class="gameLine">
         <select name="listChoices" id="listChoices"></select><br>
         <input type="number" id="startingTime" value="60" size="3">
-        seconds <br>
-        <button class="startbutton" id="startbutton">Start!</button>
-    </div>
-
-    <div id="gameplay" style="display: none;">
-        <h2 id="timer">Loading...</h2>
-        
-        <div class="gameLine">
-            <h3 id="successcount" class="score">0</h3>
-            <h3 class="score"> - </h3>
-            <h3 id="passcount" class="score">0</h3>
-        </div>
-        
-        <div class="gameLine">
-            <button class="button" id="success">Done!</button>
-            <button class="button" id="pass">Pass</button>
-        </div>
+        <div id="inLabel">seconds </div><br>
+        <button class="startbutton" id="startbutton" style="background-color: #6DA34D;">Start!</button>
     </div>
 
 
