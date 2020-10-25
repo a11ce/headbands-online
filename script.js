@@ -19,10 +19,14 @@ var pCount = 0;
 
 function newGame() {
     if (!timer) {
+        
         curList = listsDict[document.getElementById("listChoices").value]
         time = document.getElementById("startingTime").value;
-        document.getElementById("listChoices").disabled = true;
-        document.getElementById("startingTime").disabled = true;
+
+        document.getElementById("timer").innerHTML = time;
+        document.getElementById("gameOptions").style.display = "none";
+        document.getElementById("gameplay").style.display = "block";
+        
         newWord();
 
 
@@ -44,8 +48,9 @@ function endGame() {
     document.getElementById("curItem").innerHTML = "Game Over!";
     clearInterval(timer);
     timer = null;
-    document.getElementById("listChoices").disabled = false;
-    document.getElementById("startingTime").disabled = false;
+    document.getElementById("gameOptions").style.display = "block";
+    document.getElementById("gameplay").style.display = "none";
+        
 }
 
 function resetState() {

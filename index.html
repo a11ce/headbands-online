@@ -1,6 +1,7 @@
 </html>
+
 <head>
-   <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="./wordlists.js"></script>
     <script src="./script.js"></script>
 </head>
@@ -8,23 +9,33 @@
 
 <body>
 
-  <h1 id="curItem"> Headbands! </h1>
-  <div>
-  <select name="listChoices" id="listChoices">
-  </select> 
-  <input type="number" id="startingTime" value="60">
-  <button class="startbutton" id="startbutton">Start!</button>
-  <h2 id="timer">Loading...</h2>
-</div>
-  <button class="button" id="success">Success</button>
-  <button class="button" id="pass">Pass</button>
-  <h2> Passes: </h2>
-  <h3 id = "passcount">0</h3>
-  <h2> Successes: </h2>
-  <h3 id = "successcount">0</h3>
+    <h1 id="curItem">SpeedRound!</h1>
+
+    <div id="gameOptions" class="gameLine">
+        <select name="listChoices" id="listChoices"></select><br>
+        <input type="number" id="startingTime" value="60" size="3">
+        seconds <br>
+        <button class="startbutton" id="startbutton">Start!</button>
+    </div>
+
+    <div id="gameplay" style="display: none;">
+        <h2 id="timer">Loading...</h2>
+        
+        <div class="gameLine">
+            <h3 id="successcount" class="score">0</h3>
+            <h3 class="score"> - </h3>
+            <h3 id="passcount" class="score">0</h3>
+        </div>
+        
+        <div class="gameLine">
+            <button class="button" id="success">Done!</button>
+            <button class="button" id="pass">Pass</button>
+        </div>
+    </div>
 
 
 
 
 </body>
+
 </html>
